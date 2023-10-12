@@ -1,4 +1,4 @@
-package com.example.springcallprocedure;
+package com.example.springcallprocedure.car;
 
 import org.springframework.data.repository.query.Param;
 
@@ -8,5 +8,4 @@ public interface CarService {
     int getTotalCarsByModel(String model);
     List<Car> findCarsAfterYear(@Param("year_in") Integer year);
 
-    List<Car> test(@Param("year_in") Integer year);
 }

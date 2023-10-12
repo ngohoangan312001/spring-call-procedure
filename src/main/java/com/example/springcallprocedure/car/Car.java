@@ -1,5 +1,6 @@
-package com.example.springcallprocedure;
+package com.example.springcallprocedure.car;
 
+import com.example.springcallprocedure.commons.EntityConstant;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -11,16 +12,16 @@ import lombok.Data;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="car_id")
+    @Column(name= EntityConstant.ID)
     private long id;
 
-    @Column
+    @Column(name = EntityConstant.MODEL)
     private String model;
 
-    @Column
+    @Column(name = EntityConstant.NAME)
     private String name;
 
-    @Column
+    @Column(name = EntityConstant.YEAR)
     private Integer year;
 
     // standard getters and setters

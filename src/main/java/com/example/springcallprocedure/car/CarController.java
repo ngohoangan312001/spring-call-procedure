@@ -1,4 +1,4 @@
-package com.example.springcallprocedure;
+package com.example.springcallprocedure.car;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +22,7 @@ public class CarController {
 
     @GetMapping("/find")
     public List<Car> getTotalCarsByModel(@RequestParam(name = "year") int year) throws Exception {
-        List<Car> carsAfterYear = carService.test(year);
+        List<Car> carsAfterYear = carService.findCarsAfterYear(year);
         return carsAfterYear;
     }
 
