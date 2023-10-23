@@ -21,7 +21,7 @@ public class FindCarAfterYearProcedure {
     public List<Car> procedure(Integer year) {
 
         SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource)
-                .withProcedureName(ProcedureConstant.FIND_CARS_AFTER_YEAR)
+                . withProcedureName(ProcedureConstant.FIND_CARS_AFTER_YEAR)
                 .declareParameters(new SqlParameter[]{
                         new SqlParameter(ProcedureConstant.PI_YEAR, Types.INTEGER),
                         new SqlParameter(ProcedureConstant.PO_CARS, Types.REF_CURSOR)
